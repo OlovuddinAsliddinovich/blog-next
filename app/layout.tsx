@@ -3,6 +3,7 @@ import "./globals.css";
 import { Roboto } from "next/font/google";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import ClientWrapper from "./components/client-wrapper";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -23,7 +24,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={roboto.className} cz-shortcut-listen="true">
         <Navbar />
-        <div className="pt-[100px]">{children}</div>
+        <div className="pt-[100px]">
+          <ClientWrapper>{children}</ClientWrapper>
+        </div>
         <Footer />
       </body>
     </html>

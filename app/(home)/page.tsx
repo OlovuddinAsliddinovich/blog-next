@@ -18,7 +18,7 @@ export default function HomePage() {
     const data = async () => {
       setLoading(true);
       try {
-        await new Promise((resolve) => setTimeout(resolve, 1000));
+        console.log("ishladi");
       } catch (error) {
         console.log(error);
       } finally {
@@ -72,7 +72,7 @@ export default function HomePage() {
                       src="/images/blog1.jpeg"
                       alt="Custom blur orqali yuklanadigan rasm"
                       fill
-                      className={`z-10 object-cover transition-all duration-700 ease-in-out ${
+                      className={`z-10 object-cover transition-all hover:scale-110 duration-700 ease-in-out ${
                         isLoaded ? "blur-0 scale-100" : "blur-lg scale-110"
                       }`}
                       onLoadingComplete={() => setIsLoaded(true)}
@@ -126,7 +126,7 @@ export default function HomePage() {
                   fill
                   priority
                   alt="Blog Image"
-                  className={`z-10 object-cover transition-all duration-700 ease-in-out ${
+                  className={`z-10 hover:scale-110 object-cover transition-all duration-700 ease-in-out ${
                     isLoaded ? "blur-0 scale-100" : "blur-lg scale-110"
                   }`}
                 />

@@ -17,7 +17,7 @@ const BlogsPage = () => {
     const loadingData = async () => {
       setLoading(true);
       try {
-        await new Promise((resolve) => setTimeout(resolve, 1000));
+        console.log("ishladi");
       } catch (error) {
         console.log(error);
       } finally {
@@ -71,7 +71,7 @@ const BlogsPage = () => {
                       src="/images/blog1.jpeg"
                       alt="Custom blur orqali yuklanadigan rasm"
                       fill
-                      className={`z-10 object-cover transition-all duration-700 ease-in-out ${
+                      className={`z-10 hover:scale-110 object-cover transition-all duration-700 ease-in-out ${
                         isLoaded ? "blur-0 scale-100" : "blur-lg scale-110"
                       }`}
                       onLoadingComplete={() => setIsLoaded(true)}
